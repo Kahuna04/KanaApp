@@ -23,10 +23,10 @@ app.get('/api', (req, res) => {
     const currentDay = daysOfWeek[new Date().getDay()];
     // Get current UTC time with validation of +/-2 hours
     const now = new Date();
-   const utcTime = new Date(now.getTime()).toISOString();
+   const utcTime = new Date(now.getTime()).toISOString().split(".")[0] + "Z";
     // Construct the JSON response
     const jsonResponse = {
-        slack_name: 'kanapp',
+        slack_name: 'kahuna',
         utc_time: utcTime,
         current_day: 'Friday',
         track: 'backend',
