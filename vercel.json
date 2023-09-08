@@ -1,16 +1,28 @@
 {
-  "version": 2,
+ "version": 2,
   "builds": [
     {
-      "src": "app.js",
+      "src": "api/*.js", 
       "use": "@now/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "app.js/api"
+      "src": "/api/(.*)", 
+      "dest": "/api/$1"   
+    },
+    {
+      "src": "/(.*)",    
+      "dest": "/app.js"   
     }
   ]
 }
+
+
+
+
+
+
+
+
 
