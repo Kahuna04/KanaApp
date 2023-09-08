@@ -30,7 +30,7 @@ app.get('/api', (req, res) => {
         utc_time: utcTime,
         current_day: 'Friday',
         track: 'backend',
-        github_file_url: 'https://github.com/kahuna04/kanaApp/blob/master/app.ts',
+        github_file_url: 'https://github.com/kahuna04/kanaApp/blob/master/app.js',
         github_repo_url: 'https://github.com/kahuna04/KanaApp',
         status_code: 200,
     };
