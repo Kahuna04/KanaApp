@@ -2,18 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/app.js", // Assuming your API files are in a directory named "api"
+      "src": "app.js",
       "use": "@now/node"
     }
   ],
   "routes": [
     {
-      "src": "/api/(.*)", // Route requests to /api/* to the Node.js functions
-      "dest": "/api/$1"   // Map the route to the corresponding file in the "api" directory
-    },
-    {
-      "src": "/(.*)",     // Route all other requests to the main Node.js application
-      "dest": "/app.js"   // Map to your main Node.js application file
+      // Specify which paths will route to a destination using a regex
+      "src": "/(.*)",
+      // Specify the paths' destination
+      "dest": "app.js"
     }
   ]
 }
