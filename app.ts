@@ -3,7 +3,7 @@ import express from 'express';
 const app = express();
 const port = 3000;
 
-app.get('/endpoint', (req, res) => {
+app.get('/api', (req, res) => {
   // Parse query parameters
   const slackName = req.query.slack_name as string;
   const track = req.query.track as string;
