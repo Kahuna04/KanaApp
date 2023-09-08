@@ -23,11 +23,11 @@ app.get('/api', (req, res) => {
     const currentDay = daysOfWeek[new Date().getDay()];
     // Get current UTC time with validation of +/-2 hours
     const now = new Date();
-    const utcTime = new Date(now.getTime() + (now.getTimezoneOffset() + 120) * 60000).toISOString();
+   const utcTime = new Date(now.getTime()).toISOString();
     // Construct the JSON response
     const jsonResponse = {
         slack_name: 'kanapp',
-        current_day: 'Thursday',
+        current_day: 'Friday',
         utc_time: utcTime,
         track: 'backend',
         github_file_url: 'https://github.com/kahuna04/kanaApp/blob/master/app.ts',
