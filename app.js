@@ -27,8 +27,8 @@ app.get('/api', (req, res) => {
     // Construct the JSON response
     const jsonResponse = {
         slack_name: 'kanapp',
-        current_day: 'Friday',
         utc_time: utcTime,
+        current_day: 'Friday',
         track: 'backend',
         github_file_url: 'https://github.com/kahuna04/kanaApp/blob/master/app.ts',
         github_repo_url: 'https://github.com/kahuna04/KanaApp',
