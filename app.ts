@@ -8,6 +8,16 @@ app.get('/endpoint', (req, res) => {
   const slackName = req.query.slack_name as string;
   const track = req.query.track as string;
 
+    // Create GET request
+  app.get("/", (req, res) => {
+  res.send("Express on Vercel")
+  });
+
+  // Initialize server
+  app.listen(5000, () => {
+  console.log("Running on port 5000.");
+   });
+
   // Get the current day of the week
   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const currentDay = daysOfWeek[new Date().getDay()];
